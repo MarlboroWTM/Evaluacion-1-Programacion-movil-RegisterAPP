@@ -1,0 +1,178 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <div>
+        <img src="assets/img/logo-duoc-1.png" height="70px" alt="DuocLogo">
+      </div>
+    </ion-buttons>
+
+    <ion-buttons slot="end" routerLink="/home">
+      <ion-icon size="large" name="arrow-back-outline"></ion-icon>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content id="main-content" [fullscreen]="true">
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title class="ion-text-center">Horario</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      <div class="tabs-container">
+        <button class="tab-button active" onclick="showTab('lunes')">L</button>
+        <button class="tab-button" onclick="showTab('martes')">Mar</button>
+        <button class="tab-button" onclick="showTab('miercoles')">Mierc</button>
+        <button class="tab-button" onclick="showTab('jueves')">J</button>
+        <button class="tab-button" onclick="showTab('viernes')">V</button>
+      </div>
+
+      <!-- Contenido de cada pestaña -->
+      <div id="lunes" class="tab-content active">
+        <div class="table-container">
+          <table class="schedule-table">
+            <thead>
+              <tr>
+                <th>Hora</th>
+                <th>Materia</th>
+                <th>Aula</th>
+                <th>Profesor</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>08:30 - 12:10</td>
+                <td>Arquitectura</td>
+                <td>L6</td>
+                <td>Giancarlo Jaque</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div id="martes" class="tab-content">
+        <div class="table-container">
+          <table class="schedule-table">
+            <thead>
+              <tr>
+                <th>Hora</th>
+                <th>Materia</th>
+                <th>Aula</th>
+                <th>Profesor</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>08:31 - 09:50</td>
+                <td>Prog. Movil</td>
+                <td>L10</td>
+                <td>Jorge Niochet</td>
+              </tr>
+              <tr>
+                <td>13:01 - 14:20</td>
+                <td>Estadistica Desc.</td>
+                <td>L3</td>
+                <td>Francisco Orellana</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div id="miercoles" class="tab-content">
+        <div class="table-container">
+          <table class="schedule-table">
+            <thead>
+              <tr>
+                <th>Hora</th>
+                <th>Materia</th>
+                <th>Aula</th>
+                <th>Profesor</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>10:01 - 11:20</td>
+                <td>Etica laboral</td>
+                <td>415</td>
+                <td>Alejandro Belmar</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div id="jueves" class="tab-content">
+        <div class="table-container">
+          <table class="schedule-table">
+            <thead>
+              <tr>
+                <th>Hora</th>
+                <th>Materia</th>
+                <th>Aula</th>
+                <th>Profesor</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>08:31 - 11:20</td>
+                <td>Calidad de software</td>
+                <td>L4</td>
+                <td>Patricio Soto</td>
+              </tr>
+              <tr>
+                <td>13:01 - 14:20</td>
+                <td>Estadistica Desc.</td>
+                <td>L3</td>
+                <td>Francisco Orellana</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div id="viernes" class="tab-content">
+        <div class="table-container">
+          <table class="schedule-table">
+            <thead>
+              <tr>
+                <th>Hora</th>
+                <th>Materia</th>
+                <th>Aula</th>
+                <th>Profesor</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>09:11 - 11:20</td>
+                <td>Prog. Movil</td>
+                <td>L10</td>
+                <td>Jorge Niochet</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
+
+<script>
+  function showTab(day) {
+
+    var tabs = document.getElementsByClassName('tab-content');
+    for (var i = 0; i < tabs.length; i++) {
+      tabs[i].classList.remove('active');
+    }
+
+    var buttons = document.getElementsByClassName('tab-button');
+    for (var i = 0; i < buttons.length; i++) {
+      buttons[i].classList.remove('active');
+    }
+
+
+    document.getElementById(day).classList.add('active');
+    event.currentTarget.classList.add('active');
+  }
+</script>

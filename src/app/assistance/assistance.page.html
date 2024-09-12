@@ -1,0 +1,71 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <div>
+        <img src="assets/img/logo-duoc-1.png" height="70px" alt="DuocLogo">
+      </div>
+    </ion-buttons>
+
+    <ion-buttons slot="end" routerLink="/home">
+      <ion-icon size="large" name="arrow-back-outline"></ion-icon>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content id="main-content" [fullscreen]="true">
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title class="ion-text-center">Asistencia</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+
+      <div id="asistencia" class="tab-content active">
+        <div class="table-container">
+          <table class="schedule-table">
+            <thead>
+              <tr>
+                <th>Materia</th>
+                <th>Profesor</th>
+                <th>Porcentaje</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Arquitectura</td>
+                <td>Giancarlo Jaque</td>
+                <td>66.7%</td>
+              </tr>
+              <tr>
+                <td>Calidad Software</td>
+                <td>Patricio Soto</td>
+                <td>50%</td>
+              </tr>
+              <tr>
+                <td>Estadistica Desc.</td>
+                <td>Francisco Orellan</td>
+                <td>100%</td>
+              </tr>
+              <tr>
+                <td>Ingles</td>
+                <td>Paula Alvarez</td>
+                <td>71.5%</td>
+              </tr>
+              <tr>
+                <td>Portafolio</td>
+                <td>Francisco Diaz</td>
+                <td>100%</td>
+              </tr>
+              <tr>
+                <td>Prog. Movil</td>
+                <td>Jorge Niochet</td>
+                <td>100%</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
+

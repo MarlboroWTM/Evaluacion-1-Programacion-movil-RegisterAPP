@@ -1,0 +1,37 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <div>
+        <img src="assets/img/logo-duoc-1.png" height="70px" alt="DuocLogo">
+      </div>
+    </ion-buttons>
+
+    <ion-buttons slot="end" routerLink="/home">
+      <ion-icon size="large" name="arrow-back-outline"></ion-icon>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding" style="text-align: center; padding-top: 20vh; background-color: #000;">
+
+  <ion-button expand="block" color="primary" routerLink="/register">
+    <ion-icon slot="start" name="create-outline"></ion-icon>
+    <b>Registro</b>
+  </ion-button>
+
+  <div class="divider">
+    <ion-text color="medium">O</ion-text>
+  </div>
+
+  <ion-text color="medium" class="ion-text-center">
+    Ya eres un usuario?
+  </ion-text>
+
+  <ion-button expand="block" color="danger" routerLink="/login" class="ion-margin-top">
+    <ion-icon slot="start" name="log-in-outline"></ion-icon>
+    <b>Iniciar Sesion</b>
+  </ion-button>
+</ion-content>
+
+
+
